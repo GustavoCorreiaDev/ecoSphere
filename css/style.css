@@ -1,0 +1,44 @@
+.logo-ecoSphere{
+    width: 50px;
+    height: 50px;
+}
+
+.climate-feed {
+    background-color: #e8f5e9; /* Fundo leve para contraste */
+    color: #2e7d32; /* Verde escuro */
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.climate-feed span {
+    display: inline-block;
+    padding-right: 50px;
+    animation: scroll 50s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1030;
+    }
+    body {
+        padding-top: 56px; /* Altura da navbar fixa */
+    }
+}
+
+@media (max-width: 992px) {
+    .climate-feed{
+        margin-top: 0px;
+    }
+}
