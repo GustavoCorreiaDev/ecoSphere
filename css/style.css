@@ -20,13 +20,6 @@
     animation: scroll 50s linear infinite;
 }
 
-.carousel-item img {
-    width: 100%; /* Força a largura total */
-    height: 400px; /* Mantém uma altura consistente */
-    object-fit: cover; /* Mantém a proporção e evita distorções */
-}
-
-
 .grid-artigos {
     margin-top: 10px;
     display: grid;
