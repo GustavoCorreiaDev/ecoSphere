@@ -20,6 +20,27 @@
     animation: scroll 50s linear infinite;
 }
 
+.carousel-item img {
+    width: 100%; /* Força a largura total */
+    height: 400px; /* Mantém uma altura consistente */
+    object-fit: cover; /* Mantém a proporção e evita distorções */
+}
+
+
+.grid-artigos {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 colunas */
+    grid-template-rows: 1fr 1fr 1fr; /* 3 linhas */
+    gap: 15px;
+}
+
+.destaque {
+    grid-column: span 2; /* Ocupa 2 colunas */
+    grid-row: span 2;    /* Ocupa 2 linhas */
+}
+
+
 @keyframes scroll {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
@@ -37,8 +58,38 @@
     }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 992px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1030;
+    }
+    body {
+        padding-top: 56px; /* Altura da navbar fixa */
+    }
+
+    /* Ensure the navbar items are centered and spaced properly */
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px; /* Adjust the gap between items as needed */
+    }
+}
+
+@media (max-width: 991px) {
     .climate-feed{
         margin-top: 0px;
+    }
+    .grid-artigos{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
